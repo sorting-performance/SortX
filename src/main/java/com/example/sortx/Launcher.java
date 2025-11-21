@@ -1,5 +1,4 @@
 package com.example.sortx;
-
 import javafx.application.Application;
 
 public class Launcher {
