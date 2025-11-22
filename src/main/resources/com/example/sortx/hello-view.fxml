@@ -33,18 +33,18 @@
       </Button>
       <Label layoutX="37.0" layoutY="213.0" text="Click Below button to find best sorting algorithm :" />
       <TextArea fx:id="sortResultArea" layoutX="36.0" layoutY="300.0" prefHeight="345.0" prefWidth="612.0" />
-      <Label fx:id="bestAlgoLabel" layoutX="723.0" layoutY="435.0" text="Best Sorting Algorithm">
+      <Label fx:id="bestAlgoLabel" layoutX="727.0" layoutY="438.0">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <BarChart fx:id="chart" layoutX="675.0" layoutY="115.0" prefHeight="279.0" prefWidth="505.0">
-        <xAxis>
-          <CategoryAxis side="BOTTOM" />
-        </xAxis>
-        <yAxis>
-          <NumberAxis side="LEFT" />
-        </yAxis>
+      <BarChart fx:id="chart" layoutX="675.0" layoutY="115.0" prefHeight="279.0" prefWidth="556.0" title="Sorting Time">
+          <xAxis>
+              <CategoryAxis label="Sorting Algorithm" fx:id="xAxis" />
+          </xAxis>
+          <yAxis>
+              <NumberAxis fx:id="yAxis" label="Time (ms)" />
+          </yAxis>
       </BarChart>
    </children>
 </AnchorPane>
