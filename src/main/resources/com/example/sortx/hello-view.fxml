@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1280.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sortx.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sortx.HelloController">
    <children>
-      <Label layoutX="37.0" layoutY="32.0" text="SortX" textFill="#163dda">
+      <Label layoutX="37.0" layoutY="32.0" text="SortX - Find Best Sorting Algorithm" textFill="#163dda">
          <font>
             <Font name="Times New Roman Bold" size="32.0" />
          </font>
       </Label>
-      <Button layoutX="228.0" layoutY="161.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="70.0" prefWidth="144.0" text="Sort">
+      <Button contentDisplay="TOP" defaultButton="true" layoutX="236.0" layoutY="112.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="33.0" prefWidth="62.0" text="Upload" textAlignment="CENTER" AnchorPane.leftAnchor="236.0">
          <font>
-            <Font size="24.0" />
+            <Font size="11.0" />
          </font>
       </Button>
+      <LineChart layoutX="743.0" layoutY="32.0" prefHeight="261.0" prefWidth="501.0" title="Best Sorting Algorithm">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <Label layoutX="40.0" layoutY="118.0" text="Upload Your CSV Data Set File : " />
    </children>
 </AnchorPane>
