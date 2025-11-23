@@ -23,7 +23,7 @@ public class HelloController {
     @FXML
     private TextArea sortResultArea;
 
-    private List<List<String>> csvRows = new ArrayList<>();
+    private final List<List<String>> csvRows = new ArrayList<>();
     private String[] headers;
 
     @FXML
