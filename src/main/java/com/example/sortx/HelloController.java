@@ -34,7 +34,7 @@ public class HelloController {
 
 
     @FXML
-    public void buttonClick() {
+    public void uploadCsv() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Select CSV File");
         fileChooser.getExtensionFilters().add(

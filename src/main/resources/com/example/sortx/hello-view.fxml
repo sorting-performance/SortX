@@ -17,7 +17,7 @@
             <Font name="Times New Roman Bold" size="45.0" />
          </font>
       </Label>
-      <Button contentDisplay="TOP" defaultButton="true" layoutX="235.0" layoutY="111.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="33.0" prefWidth="62.0" text="Upload" textAlignment="CENTER" AnchorPane.leftAnchor="235.0">
+      <Button contentDisplay="TOP" defaultButton="true" layoutX="235.0" layoutY="111.0" mnemonicParsing="false" onAction="#uploadCsv" prefHeight="33.0" prefWidth="62.0" text="Upload" textAlignment="CENTER" AnchorPane.leftAnchor="235.0">
          <font>
             <Font size="11.0" />
          </font>
