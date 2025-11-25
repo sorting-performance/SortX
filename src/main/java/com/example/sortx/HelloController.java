@@ -13,6 +13,25 @@ import java.io.*;
 import java.util.*;
 
 public class HelloController {
+
+//    @FXML
+//    private ComboBox<String> columnComboBox;
+//
+//    @FXML
+//    private HBox previewHBox; // horizontal preview
+//
+//    @FXML
+//    private TextArea sortResultArea;
+//
+//    private final List<List<String>> csvRows = new ArrayList<>();
+//    private String[] headers;
+//
+//    @FXML
+//    private BarChart<String, Number> chart;
+//
+//    @FXML
+//    private Label bestAlgoLabel;
+
     public void buttonClick(){
         System.out.println("Sorting is Started");
     }
