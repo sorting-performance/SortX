@@ -14,28 +14,79 @@ import java.util.*;
 
 public class HelloController {
 
-//    @FXML
-//    private ComboBox<String> columnComboBox;
-//
-//    @FXML
-//    private HBox previewHBox; // horizontal preview
-//
-//    @FXML
-//    private TextArea sortResultArea;
-//
-//    private final List<List<String>> csvRows = new ArrayList<>();
-//    private String[] headers;
-//
-//    @FXML
-//    private BarChart<String, Number> chart;
-//
-//    @FXML
-//    private Label bestAlgoLabel;
+    @FXML
+    private ComboBox<String> columnComboBox;
 
-    public void buttonClick(){
-        System.out.println("Sorting is Started");
+    @FXML
+    private HBox previewHBox; // horizontal preview
+
+    @FXML
+    private TextArea sortResultArea;
+
+    private final List<List<String>> csvRows = new ArrayList<>();
+    private String[] headers;
+
+    @FXML
+    private BarChart<String, Number> chart;
+
+    @FXML
+    private Label bestAlgoLabel;
+
+
+    @FXML
+    public void uploadCsv() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Select CSV File");
+        fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("CSV Files", "*.csv")
+        );
+
+        File selectedFile = fileChooser.showOpenDialog(null);
+
+        if (selectedFile != null) {
+            try {
+                loadCSV(selectedFile);
+                List<String> numericColumns = getNumericColumns();
+                columnComboBox.getItems().clear();
+                columnComboBox.getItems().addAll(numericColumns);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
+    private void loadCSV(File csvFile) throws IOException {
+        csvRows.clear();
+        BufferedReader reader = new BufferedReader(new FileReader(csvFile));
+
+        String headerLine = reader.readLine();
+        if (headerLine == null) return;
+
+        headers = headerLine.split(",");
+
+        String line;
+        while ((line = reader.readLine()) != null) {
+            csvRows.add(Arrays.asList(line.split(",")));
+        }
+
+        reader.close();
+    }
+
+    private List<String> getNumericColumns() {
+        List<String> numericCols = new ArrayList<>();
+        for (int i = 0; i < headers.length; i++) {
+            boolean isNumeric = true;
+            for (List<String> row : csvRows) {
+                if (i >= row.size() || !row.get(i).matches("-?\\d+(\\.\\d+)?")) {
+                    isNumeric = false;
+                    break;
+                }
+            }
+            if (isNumeric) numericCols.add(headers[i]);
+        }
+        return numericCols;
+    }
 
 
 
