@@ -39,12 +39,14 @@
          </font>
       </Label>
       <BarChart fx:id="chart" layoutX="387.0" layoutY="94.0" prefHeight="292.0" prefWidth="877.0" title="Sorting Time">
-         <xAxis>
-            <CategoryAxis label="Sorting Algorithm" fx:id="xAxis" />
-         </xAxis>
-         <yAxis>
-            <NumberAxis fx:id="yAxis" label="Time (ms)" />
-         </yAxis>
+
+          <xAxis>
+              <CategoryAxis label="Sorting Algorithm" fx:id="xAxis" />
+          </xAxis>
+          <yAxis>
+              <NumberAxis fx:id="yAxis" label="Time (ms)" />
+          </yAxis>
+
       </BarChart>
    </children>
 </AnchorPane>

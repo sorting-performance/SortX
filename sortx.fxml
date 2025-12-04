@@ -12,7 +12,7 @@
             <Font name="Times New Roman Bold" size="32.0" />
          </font>
       </Label>
-      <Button layoutX="228.0" layoutY="165.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="70.0" prefWidth="144.0" text="Sort">
+      <Button layoutX="228.0" layoutY="165.0" mnemonicParsing="false" onAction="#uploadCsv" prefHeight="70.0" prefWidth="144.0" text="Sort">
          <font>
             <Font size="24.0" />
          </font>
